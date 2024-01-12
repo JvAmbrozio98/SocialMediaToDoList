@@ -1,0 +1,10 @@
+package com.example.SocialMediaToDoList.Repository;
+
+import com.example.SocialMediaToDoList.Models.User.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+
+public interface UserRepository extends JpaRepository <User,Long> {
+
+    UserDetails findByName (String name);
+}
